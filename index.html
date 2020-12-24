@@ -126,10 +126,18 @@
                 <span class="mr-2 d-inline-block rounded-circle text-center">
                   PG
                 </span>
-                <button class="border-0 text-white">
-                  <i class="fa fa-play mr-2"></i>
-                  PLAY TRAILER
-                </button>
+
+                <a
+                  class="venobox"
+                  data-vbtype="video"
+                  data-autoplay="true"
+                  href="https://www.youtube.com/watch?v=vTJdVE_gjI0"
+                >
+                  <button class="border-0 text-white">
+                    <i class="fa fa-play mr-2"></i>
+                    PLAY TRAILER
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -149,10 +157,17 @@
                 <span class="mr-2 d-inline-block rounded-circle text-center">
                   PG
                 </span>
-                <button class="border-0 text-white">
-                  <i class="fa fa-play mr-2"></i>
-                  PLAY TRAILER
-                </button>
+                <a
+                  class="venobox"
+                  data-vbtype="video"
+                  data-autoplay="true"
+                  href="https://www.youtube.com/watch?v=vTJdVE_gjI0"
+                >
+                  <button class="border-0 text-white">
+                    <i class="fa fa-play mr-2"></i>
+                    PLAY TRAILER
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -172,10 +187,17 @@
                 <span class="mr-2 d-inline-block rounded-circle text-center">
                   PG
                 </span>
-                <button class="border-0 text-white">
-                  <i class="fa fa-play mr-2"></i>
-                  PLAY TRAILER
-                </button>
+                <a
+                  class="venobox"
+                  data-vbtype="video"
+                  data-autoplay="true"
+                  href="https://www.youtube.com/watch?v=vTJdVE_gjI0"
+                >
+                  <button class="border-0 text-white">
+                    <i class="fa fa-play mr-2"></i>
+                    PLAY TRAILER
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -951,7 +973,15 @@
                   alt="trailer"
                   class="img-fluid px-auto w-100"
                 />
-                <i class="fa fa-play d-block text-center text-white"></i>
+                <!-- <i class="fa fa-play d-block text-center text-white"></i> -->
+                <a
+                  class="venobox"
+                  data-vbtype="video"
+                  data-autoplay="true"
+                  href="https://www.youtube.com/watch?v=vTJdVE_gjI0"
+                >
+                  <i class="fa fa-play d-block text-center text-white"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -1156,6 +1186,21 @@
             items: 6,
           },
         },
+      });
+
+      $(document).ready(function () {
+        $(".venobox").venobox();
+      });
+
+      $(".venobox_custom").venobox({
+        framewidth: "400px", // default: ''
+        frameheight: "300px", // default: ''
+        border: "10px", // default: '0'
+        bgcolor: "#5dff5e", // default: '#fff'
+        titleattr: "data-title", // default: 'title'
+        numeratio: true, // default: false
+        infinigall: true, // default: false
+        share: ["facebook", "twitter", "download"], // default: []
       });
     </script>
   </body>
