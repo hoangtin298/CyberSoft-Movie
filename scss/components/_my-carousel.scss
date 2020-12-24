@@ -1,0 +1,85 @@
+.my-carousel {
+  .carousel-item {
+    position: relative;
+    height: 650px !important;
+
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    width: 100% !important;
+    height: 650px !important;
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to top, #000, transparent) !important;
+    }
+    .caption {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      > span {
+        color: $color-primary;
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+      > p {
+        font-size: 18px;
+        padding-right: 40%;
+      }
+
+      .trailer {
+        span {
+          width: 55px;
+          height: 55px;
+          border: 2px solid $color-white;
+          line-height: 55px;
+        }
+        button {
+          background: $color-gradient-primary;
+          border-radius: 999px;
+          font-size: 14px;
+          letter-spacing: 2px;
+          padding: 15px 30px;
+        }
+      }
+    }
+  }
+
+  .carousel-indicators {
+    bottom: 65px;
+    left: -30px;
+    li {
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      border: 2px solid $color-white;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+    .active {
+      background: $color-white;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .my-carousel {
+    .caption {
+      > p {
+        padding: 0 !important;
+      }
+
+      > h1 {
+        font-size: 40px;
+        font-weight: 300;
+        margin: 15px 0;
+      }
+    }
+  }
+}

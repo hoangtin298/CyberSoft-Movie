@@ -1,0 +1,43 @@
+@mixin under-line-after($width) {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  left: 0;
+  bottom: -1px;
+  width: $width;
+  background: $color-gradient-primary;
+  transition: all 0.3s linear;
+}
+
+@mixin title-style() {
+  color: $color-primary-bold;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 15px;
+
+  position: relative;
+}
+
+@mixin play-button-icon() {
+  width: 80px;
+  height: 80px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 2px solid $color-white;
+  margin: 10px auto;
+  line-height: 80px;
+
+  transition: all 0.3s ease;
+
+  cursor: pointer;
+  &:hover {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,55 @@
+.footer {
+  background-color: #101010;
+  h1 {
+    font-size: 18px;
+    color: $color-primary-bold;
+    margin-bottom: 20px;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: $color-white;
+    transition: all 0.5s ease;
+    &:hover {
+      color: $color-primary;
+      i {
+        color: $color-primary;
+      }
+    }
+    i {
+      font-size: 14px;
+      min-width: 25px;
+      color: #4a5358;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .underline-bottom {
+    border-bottom: 1px solid #4a5358;
+  }
+
+  .copy-right {
+    span {
+      font-size: 14px;
+      padding: 20px 0;
+      a {
+        &:hover {
+          color: $color-primary-bold;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .footer {
+    .copy-right {
+      span {
+        text-align: center;
+      }
+    }
+  }
+}

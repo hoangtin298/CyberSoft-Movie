@@ -1,0 +1,81 @@
+.movie {
+  padding-top: 60px;
+  h1 {
+    @include title-style();
+    &::after {
+      @include under-line-after(130px);
+    }
+  }
+
+  .content {
+    border-radius: 10px;
+    position: relative;
+
+    &:hover {
+      .overlay {
+        left: -100%;
+      }
+      .detail {
+        opacity: 1;
+        transform: scale(1) translate(0, -50%);
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: -400%;
+      transform: skewX(45deg);
+      background: $color-gradient-primary;
+      width: 300%;
+      height: 100%;
+      transition: all 0.4s ease;
+      opacity: 0.8;
+    }
+
+    .detail {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: scale(0.8) translate(0, -50%);
+
+      width: 100%;
+
+      opacity: 0;
+      transition: all 0.3s ease;
+
+      i {
+        @include play-button-icon();
+      }
+
+      a {
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+        font-weight: 500;
+      }
+
+      p {
+      }
+    }
+  }
+  .name {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  .star {
+    i {
+      color: $color-primary;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .movie {
+    .item {
+      width: 80% !important;
+      margin: auto !important;
+    }
+  }
+}

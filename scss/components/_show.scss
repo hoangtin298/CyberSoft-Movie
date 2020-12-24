@@ -1,0 +1,120 @@
+.show {
+  .nav-tabs {
+    .nav-link {
+      border: $color-white;
+      position: relative;
+      padding: 10px 30px;
+      color: $color-text-black;
+      &::after {
+        @include under-line-after(0);
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+    .active {
+      border: $color-white;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .tab-content {
+    img {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .detail {
+      > span {
+        color: $color-primary-bold;
+      }
+
+      > h1 {
+        font-size: 25px;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+      > p {
+        font-size: 14px;
+      }
+      > a {
+        color: $color-primary-bold;
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+    }
+
+    .list {
+      > i {
+        font-size: 14px;
+      }
+      > span {
+        font-size: 14px;
+      }
+      .schedule {
+        display: flex;
+        align-items: center;
+        .title {
+        }
+        .btn-time {
+        }
+      }
+      .length {
+        > span {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          line-height: 35px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 920px) {
+  .show {
+    .nav-tabs {
+      flex-direction: column;
+
+      .nav-link {
+        font-size: 20px;
+      }
+    }
+  }
+  .detail {
+    margin: 10px 0;
+  }
+  .list {
+    flex-direction: column;
+
+    .schedule {
+      flex-direction: column;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+      width: 100%;
+      .btn-time {
+        margin-top: 10px;
+      }
+    }
+    .length {
+      display: block;
+
+      margin-left: auto !important;
+      margin-top: 10px;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  .list {
+    justify-content: flex-start !important;
+    .schedule {
+      .title {
+        width: 100%;
+      }
+      .btn-time {
+        width: 100%;
+      }
+    }
+  }
+}
